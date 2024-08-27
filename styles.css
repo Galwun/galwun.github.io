@@ -1,4 +1,4 @@
-/* Ensure full height for html and body */
+/* Global Styles */
 html, body {
     height: 100%;
     margin: 0;
@@ -37,8 +37,16 @@ header.light-mode {
     background-color: #f8f8f8;
 }
 
-header img {
-    height: 24px;
+/* Logo Text Styles */
+.logo-text {
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold; /* Bold to stand out */
+    color: #ffffff; /* White text for contrast in dark mode */
+    text-transform: uppercase; /* Optional: make all letters uppercase */
+}
+
+.light-mode .logo-text {
+    color: #000000; /* Dark text for contrast in light mode */
 }
 
 nav a {
