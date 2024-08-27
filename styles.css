@@ -37,12 +37,13 @@ header.light-mode {
     background-color: #f8f8f8;
 }
 
-/* Logo Text Styles */
+/* Logo Text Styles - Smaller and more minimalist */
 .logo-text {
-    font-size: 24px; /* Adjust size as needed */
-    font-weight: bold; /* Bold to stand out */
+    font-size: 18px; /* Reduced font size */
+    font-weight: bold; /* Still bold for emphasis */
     color: #ffffff; /* White text for contrast in dark mode */
     text-transform: uppercase; /* Optional: make all letters uppercase */
+    margin: 0; /* Remove any extra margin */
 }
 
 .light-mode .logo-text {
