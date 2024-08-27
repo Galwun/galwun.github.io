@@ -39,6 +39,7 @@ header.light-mode {
     text-transform: uppercase; /* Optional: make all letters uppercase */
     margin: 0; /* Remove any extra margin */
     font-weight: normal; /* Ensure the text is not bold */
+    text-decoration: none;
 }
 
 .light-mode .logo-text {
