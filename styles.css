@@ -37,9 +37,10 @@ header.light-mode {
     background-color: #f8f8f8;
 }
 
-/* Logo Text Styles - Smaller and more minimalist, without bold */
+/* Logo Text Styles - Use Matemasie font */
 .logo-text {
     font-size: 18px; /* Adjusted size for minimalism */
+    font-family: 'Matemasie', sans-serif; /* Apply Matemasie font */
     color: #ffffff; /* White text for contrast in dark mode */
     text-transform: uppercase; /* Optional: make all letters uppercase */
     margin: 0; /* Remove any extra margin */
