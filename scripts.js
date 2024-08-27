@@ -16,7 +16,7 @@ function renderProducts() {
             <img src="${product.image}" alt="${product.name}">
             <h2>${product.name}</h2>
             <p>${product.description}</p>
-            <button>View Details</button> <!-- Button added here -->
+            <button>View Details</button>
         `;
         productList.appendChild(productDiv);
     });
