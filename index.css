@@ -1,0 +1,512 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1e;
+    transition: background-color 0.5s;
+}
+
+header.light-mode {
+    background-color: #f8f8f8;
+}
+
+/* Logo Text Styles */
+.logo-text {
+    font-size: 18px; /* Adjusted size for minimalism */
+    font-family: 'Matemasie', sans-serif; /* Apply Matemasie font */
+    color: #ffffff; /* White text for contrast in dark mode */
+    text-transform: uppercase; /* Optional: make all letters uppercase */
+    margin: 0; /* Remove any extra margin */
+    font-weight: normal; /* Ensure the text is not bold */
+}
+
+.light-mode .logo-text {
+    color: #000000; /* Dark text for contrast in light mode */
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+/* Theme Switch Button */
+.theme-switch {
+    cursor: pointer;
+    border-radius: 50%; /* Circular shape */
+    background-color: transparent; /* Transparent background */
+    color: inherit; /* Use current text color */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon within the circle */
+    width: 24px; /* Minimal width */
+    height: 24px; /* Minimal height */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.theme-switch:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.theme-switch i {
+    font-size: 14px; /* Small icon size */
+}
+
+.theme-switch .fa-sun {
+    display: none;
+}
+
+.theme-switch.light-mode .fa-sun {
+    display: inline;
+}
+
+.theme-switch.light-mode .fa-moon {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    flex: 1; /* Takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    transition: color 0.5s;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #1c1c1e;
+    transition: background-color 0.5s, transform 0.3s, box-shadow 0.3s; /* Transition for animations */
+}
+
+.product.light-mode {
+    background-color: #f8f8f8;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lift effect */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0071e3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #005bb5;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+
+    background-color: #1c1c1e;
+    color: #8e8e93;
+    transition: background-color 0.5s, color 0.5s;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer.light-mode {
+    background-color: #f8f8f8;
+    color: #5e5e5e;
+}
+
+/* New Button Styles */
+.type--A {
+    --line_color: #555555;
+    --back_color: #FFECF6;
+}
+
+.type--B {
+    --line_color: #1b1919;
+    --back_color: #E9ECFF;
+}
+
+.type--C {
+    --line_color: #00135C;
+    --back_color: #DEFFFA;
+}
+
+.button {
+    position: relative;
+    z-index: 0;
+    width: 240px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: all .3s ease;
+}
+
+.button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line_color);
+    transition: all .5s ease;
+}
+
+.button::before {
+    top: 0;
+    left: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button::after {
+    top: 0;
+    right: 54px;
+    width: 8px;
+}
+
+.button__text::before {
+    bottom: 0;
+    right: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__text::after {
+    bottom: 0;
+    left: 54px;
+    width: 8px;
+}
+
+.button__line {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.button__line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+    border: solid 3px var(--line_color);
+}
+
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before {
+    left: 0;
+}
+
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before {
+    right: 0;
+}
+
+.button:hover {
+    letter-spacing: 6px;
+}
+
+.button:hover::before,
+.button:hover .button__text::before {
+    width: 8px;
+}
+
+.button:hover::after,
+.button:hover .button__text::after {
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__drow1,
+.button__drow2 {
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+}
+
+.button__drow1 {
+    top: -16px;
+    left: 40px;
+    width: 32px;
+    height: 0;
+    transform: rotate(30deg);
+}
+
+.button__drow2 {
+    top: 44px;
+    left: 77px;
+    width: 32px;
+    height: 0;
+    transform: rotate(-127deg);
+}
+
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after {
+    content: '';
+    position: absolute;
+}
+
+.button__drow1::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-60deg);
+}
+
+.button__drow1::after {
+    top: -10px;
+    left: 45px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(69deg);
+}
+
+.button__drow2::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-146deg);
+}
+
+.button__drow2::after {
+    bottom: 26px;
+    left: -40px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-262deg);
+}
+
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after {
+    background: var(--back_color);
+}
+
+.button:hover .button__drow1 {
+    animation: drow1 ease-in .06s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::before {
+    animation: drow2 linear .08s .06s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::after {
+    animation: drow3 linear .03s .14s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2 {
+    animation: drow4 linear .06s .2s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::before {
+    animation: drow3 linear .03s .26s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::after {
+    animation: drow5 linear .06s .32s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drow1 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes drow2 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 120px;
+    }
+}
+
+@keyframes drow3 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes drow4 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+
+@keyframes drow5 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 124px;
+    }
+}
+
+
+
+.button:not(:last-child) {
+    margin-bottom: 64px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+
+.container {
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Roboto';
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
