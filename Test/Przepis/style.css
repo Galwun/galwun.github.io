@@ -133,7 +133,6 @@ body.light-theme footer {
     background-color: #333;
 }
 
-
 /* Panel dodawania przepisów */
 #dodaj-przepis {
     background-color: #444; /* Ciemne tło dla panelu */
@@ -182,4 +181,18 @@ body.light-theme footer {
     background-color: #660066; /* Ciemniejszy fiolet na hover */
 }
 
-/* Pozostałe style pozostają bez zmian */
+/* Stylizacja przycisku usuwania przepisu */
+button.delete {
+    background-color: #cc0000; /* Czerwony dla przycisków usuwania przepisu */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru przycisków */
+}
+
+button.delete:hover {
+    background-color: #990000; /* Ciemniejszy czerwony na hover */
+}
