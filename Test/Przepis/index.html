@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przepisy na ciasta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Przepisy na ciasta</h1>
+    </header>
+    
+    <main>
+        <!-- Panel dodawania przepisów -->
+        <section id="dodaj-przepis">
+            <h2>Dodaj nowy przepis</h2>
+            <form id="przepis-form">
+                <label for="tytul">Tytuł:</label>
+                <input type="text" id="tytul" required>
+                
+                <label for="skladniki">Składniki:</label>
+                <textarea id="skladniki" rows="5" required></textarea>
+                
+                <label for="instrukcje">Instrukcje:</label>
+                <textarea id="instrukcje" rows="5" required></textarea>
+                
+                <label for="zdjecie">Link do zdjęcia:</label>
+                <input type="text" id="zdjecie">
+                
+                <button type="submit">Dodaj przepis</button>
+            </form>
+        </section>
+
+        <section id="przepisy">
+            <article class="przepis">
+                <h2>Szarlotka</h2>
+                <button class="toggle">Pokaż/Ukryj przepis</button>
+                <div class="przepis-tresc">
+                    <img src="szarlotka.jpg" alt="Zdjęcie szarlotki">
+                    <h3>Składniki:</h3>
+                    <ul>
+                        <li>1 kg jabłek</li>
+                        <li>2 szklanki mąki</li>
+                        <li>1 szklanka cukru</li>
+                        <li>200 g masła</li>
+                        <li>2 jajka</li>
+                        <li>1 łyżeczka proszku do pieczenia</li>
+                        <li>1 łyżeczka cynamonu</li>
+                    </ul>
+                    <h3>Instrukcje:</h3>
+                    <ol>
+                        <li>Obierz jabłka i pokrój na plasterki.</li>
+                        <li>Zagnieć ciasto z mąki, masła, cukru, jajek i proszku do pieczenia.</li>
+                        <li>Wyłóż ciasto do formy i połóż na nim jabłka.</li>
+                        <li>Posyp cynamonem i piecz w temperaturze 180°C przez 45 minut.</li>
+                    </ol>
+                </div>
+            </article>
+            
+            <article class="przepis">
+                <h2>Ciasto czekoladowe</h2>
+                <button class="toggle">Pokaż/Ukryj przepis</button>
+                <div class="przepis-tresc">
+                    <img src="ciasto_czekoladowe.jpg" alt="Zdjęcie ciasta czekoladowego">
+                    <h3>Składniki:</h3>
+                    <ul>
+                        <li>200 g czekolady gorzkiej</li>
+                        <li>150 g masła</li>
+                        <li>200 g cukru</li>
+                        <li>4 jajka</li>
+                        <li>100 g mąki</li>
+                        <li>1 łyżeczka proszku do pieczenia</li>
+                    </ul>
+                    <h3>Instrukcje:</h3>
+                    <ol>
+                        <li>Rozpuść czekoladę z masłem w kąpieli wodnej.</li>
+                        <li>Ubij jajka z cukrem na puszystą masę.</li>
+                        <li>Dodaj rozpuszczoną czekoladę i delikatnie wymieszaj.</li>
+                        <li>Przesiej mąkę z proszkiem do pieczenia i dodaj do masy czekoladowej.</li>
+                        <li>Wylej ciasto do formy i piecz w temperaturze 180°C przez 30 minut.</li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Przepisy na ciasta. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Przycisk zmiany motywu -->
+    <button id="theme-toggle">🌓</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

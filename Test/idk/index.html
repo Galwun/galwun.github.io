@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gałwun - Strona Główna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+</head>
+<body class="dark-mode">
+
+    <header>
+        <div class="logo" onclick="location.href='index.html'">Gałwun</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" id="home-link">Strona Główna</a></li>
+                <li><a href="#" id="download-link">Download</a></li>
+                <li><a href="https://discord.com" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-switch">
+            <i id="sun-icon" class="fas fa-sun"></i>
+            <i id="moon-icon" class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+        <section id="welcome-screen">
+            <h1>Witamy na stronie Gałwun!</h1>
+            <p>Odkryj najnowsze funkcje i pobierz nasze pliki.</p>
+        </section>
+
+        <section id="product-list" style="display: none;">
+            <!-- Produkty będą renderowane tutaj dynamicznie -->
+        </section>
+
+        <section id="download-section" style="display: none;">
+            <h2>Pliki do pobrania</h2>
+            <div class="file product">
+                <h3>Plik 1</h3>
+                <p>Opis pliku 1</p>
+                <button onclick="downloadFile('file1.txt')">Pobierz</button>
+            </div>
+            <div class="file product">
+                <h3>Plik 2</h3>
+                <p>Opis pliku 2</p>
+                <button onclick="downloadFile('file2.txt')">Pobierz</button>
+            </div>
+            <div class="file product">
+                <h3>Plik 3</h3>
+                <p>Opis pliku 3</p>
+                <button onclick="downloadFile('file3.txt')">Pobierz</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gałwun. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
