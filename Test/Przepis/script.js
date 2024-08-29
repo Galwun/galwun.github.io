@@ -65,6 +65,7 @@ function addRecipeToDOM(recipe) {
     newArticle.innerHTML = `
         <h2>${recipe.title}</h2>
         <button class="toggle">Pokaż/Ukryj przepis</button>
+        <button class="delete">Usuń przepis</button>
         <div class="przepis-tresc">
             ${recipe.image ? `<img src="${recipe.image}" alt="Zdjęcie ${recipe.title}">` : ''}
             <h3>Składniki:</h3>
@@ -88,10 +89,26 @@ function addRecipeToDOM(recipe) {
             tresc.classList.add('show');
         }
     });
+
+    // Dodanie zdarzenia dla nowego przycisku "Usuń przepis"
+    const newDelete = newArticle.querySelector('.delete');
+    newDelete.addEventListener('click', () => {
+        if (confirm('Czy na pewno chcesz usunąć ten przepis?')) {
+            newArticle.remove();
+            removeRecipeFromLocalStorage(recipe.title);
+        }
+    });
 }
 
 // Funkcja ładowania przepisów z Local Storage
 function loadRecipes() {
     const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
     recipes.forEach(recipe => addRecipeToDOM(recipe));
+}
+
+// Funkcja usuwania przepisu z Local Storage
+function removeRecipeFromLocalStorage(title) {
+    const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    const updatedRecipes = recipes.filter(recipe => recipe.title !== title);
+    localStorage.setItem('recipes', JSON.stringify(updatedRecipes));
 }
